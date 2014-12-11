@@ -1,0 +1,96 @@
+{% extends '_base.html' %} {% block extra_css %} {% endblock extra_css %} {% block extra_head_js %} {% endblock extra_head_js %} {% block extra_head %} {% endblock extra_head %} {% block content %}
+
+
+
+
+<header class="navbarre headroom" role="banner">
+
+    <a href="http://www.letemps.ch">
+        <img src="assets/logo.jpg" class="logo" height="20" style="       margin-bottom:6px;padding-right:5px;" />
+    </a>
+    <span style="font-size:16px;font-style:normal;font-family:georgia;color:#444">| COLOGNY<span>
+
+
+    <a class="share-button"></a>
+
+
+</header>
+
+
+<div class="titlecard-wrapper">
+
+
+
+    <div id="top" style="top:0px;position:absolute;" class="waypoint" data-down-waypoint="0,38" data-up-waypoint="0,38"></div>
+    <div id="title-text" class="animated fadeIn">
+        <div class="container">
+            <div class="titlecard-container">
+                <div class="titlecard-content">
+
+                    <span style="background:transparent;font-family:Georgia;padding-top:100px">
+                        <img src="img/tempsblanc.png" width="150" />
+                    </span>
+                    <h1 style="padding-top:185px;margin-border-bottom:0px dotted #fff;text-transform:uppercase;opacity:0.8">COLOGNY</h1>
+                    <p style="font-family:Georgia;font-size:2.1em;font-weight:100;color:#fff;margin-top:-20px;margin-bottom:-30px;opacity:0.8">
+                    Le paradis (perdu) des ultra-riches
+                    </p>
+
+                    <p>
+                        <div class="begin-bar" style="padding-top:60px;opacity:1">
+                            <img src="img/icon.png" height="40" style="cursor:pointer;" </p>
+                        </div>
+
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /#title-text -->
+    <div class="titlecard-mask animated fadeOut"></div>
+    <div class="titlecard"></div>
+</div>
+<!-- /titlecard-wrapper -->
+
+
+<div id="content">
+
+    {% for row in COPY.primary %} {% if row.template == 'chapter' %} {% if row.first_chapter != 'yes' %}
+    <!--</section>-->
+    {% endif %} {% endif %} {% include "%s.html"|format(row.template) ignore missing %} {% endfor %}
+
+
+    <div id="audio-story">
+
+
+
+
+        <div class="story-wrapper">
+            <div class="story-text noimg">
+
+                <div class="credits">
+                    <h6>Crédits</h6>
+                  
+                    <p>
+                    Réalisation technique : Jean Abbiateci<br>
+                    Photos : Eddy Mottaz et AFP (pour les vignettes)<br>
+                    Code adapté d'un <a href="http://www.github.com/nprapps/app-template" target="_blank">template de la NPR </a><br><br><br>
+
+                    </p>
+                </div>
+
+            </div>
+            <!--/col-->
+        </div>
+        <!--/row-->
+
+    </div>
+    <!--/audio-story -->
+    <script src="js/jquery-headroom.js"></script>
+     
+
+</div>
+<!-- /content -->
+
+{% endblock %} {% block extra_foot_js %} {% endblock %}

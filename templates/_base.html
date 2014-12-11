@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{{ PROJECT_NAME }} : Le Temps</title>
+
+    {% include '_meta.html' %}
+
+    <!-- CHARTBEAT -->
+
+    <!-- FONTS -->
+    {% include '_fonts.html' %}
+
+    <!-- CSS -->
+    {{ CSS.push('less/app.less') }}
+    {% block extra_css %}{% endblock extra_css %}
+    {{ CSS.render('css/app.min.css') }}
+
+    <!-- JS -->
+    {{ JS.push('js/lib/modernizr.js') }}
+    {{ JS.render('js/app-header.min.js') }}
+
+    {# Twitter #}
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@ndataletemps">
+    <meta name="twitter:image" content="{{ TWITTER_IMAGE_URL }}" />
+
+    {# Facebook #}
+    <meta property="og:title" content="{{ PROJECT_NAME }}" />
+    <meta property="og:url" content="{{ SHARE_URL }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="{{ COPY.attribution.subhed_top }}" />
+    <meta property="og:image" content="{{ FACEBOOK_IMAGE_URL }}" />
+    <meta property="og:site_name" content="NPR.org" />
+    <meta property="fb:app_id" content="{{ FACEBOOK_APP_ID }}" />
+
+    {# Google News #}
+    <meta name="thumbnail" content="{{ GOOGLE_IMAGE_URL }}" />
+
+<!--  INSERER VOS SCRIPTS-->
+<link rel="stylesheet" type="text/css" href="css/jquery-headroom.css"  />
+
+
+
+
+
+<script src="js/jquery.min.js"></script>
+    {% block extra_head %}
+    {% endblock extra_head %}
+</head>
+<body>
+    {% block outer_content %}
+    {% block content %}
+    {% endblock content %}
+
+   
+
+    {% endblock outer_content %}
+
+    {% block comments %}
+    <div id="comments" class="comments-container comments-panel"></div>
+    {% endblock %}
+
+    {% block extra_foot %}
+    {% endblock extra_foot %}
+
+    {{ JS.push('js/lib/jquery.js') }}
+    {{ JS.push('js/lib/underscore.js') }}
+    {{ JS.push('js/lib/bootstrap.js') }}
+    {{ JS.push('js/lib/moment.js') }}
+    {{ JS.push('js/lib/html5.js') }}
+    {{ JS.push('js/lib/modernizr.js') }}
+    {{ JS.push('js/lib/underscore.js') }}
+    {{ JS.push('js/lib/moment.js') }}
+    {{ JS.push('js/lib/bootstrap.js') }}
+    {{ JS.push('js/lib/jquery.unveil.js') }}
+    {{ JS.push('js/lib/jquery.scrollmotion.js') }}
+    {{ JS.push('js/lib/jquery.smooth-scroll.min.js') }}
+    {{ JS.push('js/lib/jquery.jplayer.js') }}
+    {{ JS.push('js/lib/jquery.jplayer.fade.js') }}
+    {{ JS.push('js/lib/jquery.waypoints.js') }}
+    {{ JS.push('js/app_config.js') }}
+    {{ JS.push('js/copy.js') }}
+    {{ JS.push('js/console.js') }}
+    {{ JS.push('js/templates.js') }}
+  
+    {{ JS.push('js/app.js') }}
+    {% block extra_foot_js %}
+    {% endblock extra_foot_js %}
+    {{ JS.render('js/app-footer.min.js') }}
+
+   
+</body>
+<script src="js/pym.js"></script>
+
+ <script src="js/share.min.js"></script>
+    <script>
+new Share(".share-button", {
+  ui: {
+    flyout: "bottom left"
+  }
+})
+    </script>
+
+</html>

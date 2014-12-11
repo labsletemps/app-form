@@ -1,0 +1,198 @@
+.comment-button.comment-button-article {
+  display: block;
+  background: #e0e0e0;
+  font-weight: bold;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+}
+.comment-button.comment-button-article:hover {
+  opacity: 0.7;
+}
+@media screen and (min-width: 481px) {
+  .comment-button.comment-button-article {
+    position: fixed;
+    right: 0;
+    bottom: 80px;
+    z-index: 100;
+    width: 91px;
+    background: #7598c9;
+    color: #fff;
+    font-size: 11px;
+    text-align: left;
+  }
+  .comment-button.comment-button-article .comment-count {
+    position: absolute;
+    top: 50%;
+    right: 80px;
+    display: none;
+    margin-top: -11px;
+    padding: 0 5px;
+    min-width: 22px;
+    height: 22px;
+    background: #bccae5;
+    color: #fff;
+    text-align: center;
+    line-height: 22px;
+    -webkit-border-radius: 11px;
+    border-radius: 11px;
+    background-clip: padding-box;
+  }
+  .comment-button.comment-button-article .comment-count.has-comments {
+    display: block;
+  }
+  .comment-button.comment-button-article .comment-label {
+    margin-left: 16px;
+  }
+}
+.comment-button.comment-button-bubble,
+.comment-button.comment-button-bubble:visited {
+  position: relative;
+  display: inline-block;
+  padding: 5px;
+  min-width: 30px;
+  background: #999999;
+  color: #fff;
+  text-align: center;
+  font-family: "Gotham SSm", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.comment-button.comment-button-bubble:after,
+.comment-button.comment-button-bubble:visited:after {
+  position: absolute;
+  right: 5px;
+  bottom: -10px;
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-width: 0 10px 10px 0;
+  border-style: solid;
+  border-color: transparent #999999 transparent transparent;
+  content: ' ';
+}
+.comment-button.comment-button-bubble:hover,
+.comment-button.comment-button-bubble:visited:hover {
+  background: #428bca;
+  color: #fff;
+}
+.comment-button.comment-button-bubble:hover:after,
+.comment-button.comment-button-bubble:visited:hover:after {
+  border-color: transparent #428bca transparent transparent;
+}
+.comment-button.comment-button-bubble:link,
+.comment-button.comment-button-bubble:visited:link {
+  color: #fff;
+}
+.comments-container h2,
+.comments-container h5 {
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 20px;
+}
+.comments-container h2 {
+  font-size: 22px;
+}
+.comments-container h3 {
+  font-size: 18px;
+  color: #999999;
+}
+.comments-container p small,
+.comments-container .comment-terms {
+  font-size: 12px;
+  line-height: 1.5;
+}
+.comments-container.comments-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 200;
+  overflow: auto;
+  padding: 15px;
+  max-width: 600px;
+  background: #fff;
+  width: 100%;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transform: translate(100%, 0);
+  -moz-transform: translate(100%, 0);
+  -ms-transform: translate(100%, 0);
+  -o-transform: translate(100%, 0);
+  transform: translate(100%, 0);
+}
+.comments-container.comments-panel.show {
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+@media screen and (min-width: 768px) {
+  .comments-container.comments-panel {
+    width: 50%;
+    padding: 30px;
+  }
+}
+.comments-container.comments-panel .comments-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 36px;
+  height: 36px;
+  background: #999999;
+  line-height: 36px;
+  text-align: center;
+}
+.comments-container.comments-panel .comments-close:after {
+  content: "\00d7";
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  top: -3px;
+}
+.touch .comments-container.comments-panel .comments-close {
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+}
+.touch .comments-container.comments-panel .comments-close:after {
+  font-size: 36px;
+}
+.comments-container.fullpage {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 15px;
+}
+.comments-container.fullpage > .back {
+  color: #999999;
+  font-family: "Gotham SSm", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+@media screen and (min-width: 992px) {
+  .comments-container.fullpage > .back {
+    position: absolute;
+    left: 0;
+    top: 35px;
+    margin-left: 15px;
+  }
+}
+.comments-container.fullpage .npr-logo {
+  width: 60px;
+}
+.comments-container.fullpage > h2 {
+  line-height: 20px;
+}
+.comments-container.fullpage > h1 {
+  font-family: "Gotham SSm", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.comments-container.fullpage > h1 a {
+  color: #333333;
+}
